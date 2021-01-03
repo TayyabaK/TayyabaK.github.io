@@ -30,16 +30,19 @@ $(btnqp).click(function(){
    var quote = getRandomquote('quotes.csv');
    $(textqp).text = quote.text;
    $(pauthor).text = quote.author;
+   alert(quote.text + " : " + quote.author) ;
 });
 
 $(btnqi).click(function(){
    var quote = getRandomquote('inspirational-quotes.csv');
    $(textqi).text = quote.text;
    $(iauthor).text = quote.author;
+    alert(quote.text + " : " + quote.author) ;
 });
 
 $(btnqm).click(function(){
   var quote = getRandomquote('motivational-quotes.csv');
    $(textqm).text = quote.text;
    $(mauthor).text = quote.author;
+    alert(quote.text + " : " + quote.author) ;
 });
