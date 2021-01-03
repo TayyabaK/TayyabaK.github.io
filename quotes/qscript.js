@@ -26,23 +26,23 @@ function getRandomquote(filename){
      return quote;
 }
 
-$(btnqp).click(function(){
+$('#btnqp').click(function(){
    var quote = getRandomquote('quotes.csv');
-   $(textqp).text = quote.text;
-   $(pauthor).text = quote.author;
+   $('#textqp').text = quote.text;
+   $('#pauthor').text = quote.author;
    alert(quote.text + " : " + quote.author) ;
 });
 
-$(btnqi).click(function(){
+$('#btnqi').click(function(){
    var quote = getRandomquote('inspirational-quotes.csv');
-   $(textqi).text = quote.text;
-   $(iauthor).text = quote.author;
+   $('#textqi').text = quote.text;
+   $('#iauthor').text = quote.author;
     alert(quote.text + " : " + quote.author) ;
 });
 
-$(btnqm).click(function(){
+$('#btnqm').click(function(){
   var quote = getRandomquote('motivational-quotes.csv');
-   $(textqm).text = quote.text;
-   $(mauthor).text = quote.author;
+   $('#textqm').text = quote.text;
+   $('#mauthor').text = quote.author;
     alert(quote.text + " : " + quote.author) ;
 });
