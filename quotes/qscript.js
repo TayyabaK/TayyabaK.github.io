@@ -27,19 +27,19 @@ function getRandomquote(filename){
 }
 
 $(btnqp).click(function(){
-   var quote = getRandomquote('quotes.cv');
+   var quote = getRandomquote('quotes.csv');
    $(textqp).text = quote.text;
    $(pauthor).text = quote.author;
 });
 
 $(btnqi).click(function(){
-   var quote = getRandomquote('inspirational-quotes.cv');
+   var quote = getRandomquote('inspirational-quotes.csv');
    $(textip).text = quote.text;
    $(iauthor).text = quote.author;
 });
 
 $(btnqm).click(function(){
-  var quote = getRandomquote('quotes.cv');
+  var quote = getRandomquote('motivational-quotes.csv');
    $(textqm).text = quote.text;
    $(mauthor).text = quote.author;
 });
