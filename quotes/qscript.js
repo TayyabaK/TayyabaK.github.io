@@ -34,7 +34,7 @@ $(btnqp).click(function(){
 
 $(btnqi).click(function(){
    var quote = getRandomquote('inspirational-quotes.csv');
-   $(textip).text = quote.text;
+   $(textqi).text = quote.text;
    $(iauthor).text = quote.author;
 });
 
