@@ -9,7 +9,10 @@ function readFile(fileName)
 {
       var reader = new FileReader();
       
-      reader.readAsText(file);
+      var f = new File([""], fileName);
+
+      
+      reader.readAsText(f);
     
       reader.onload = function() {
         console.log(reader.result);
@@ -33,6 +36,7 @@ function clickqp()
 {
        alert('Popular');
        readFile('quotes.csv')
+        
 }
 
 function clickqi()
