@@ -2,7 +2,8 @@ function loadQuote(fileName,qtextid,qtextauth) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     var quotesArray  = JSON.parse(this.responseText)
+     var quotesArray = []
+     quotesArray  = JSON.parse(this.responseText)
      
      var rand = Math.random() * (3000 - 1) + 1;
      $(qtextid).text = quotesArray[rand-1].quote; 
