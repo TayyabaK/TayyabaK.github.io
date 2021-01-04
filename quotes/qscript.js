@@ -5,8 +5,8 @@ function loadQuote(fileName,qtextid,qtextauth) {
      var quotesArray  = JSON.parse(this.responseText)
      
      var rand = Math.random() * (3000 - 1) + 1;
-     $(qtextid).text = quotesArray[rand-1]['quote']; 
-     $(qtextauth).text = quotesArray[rand-1]['author']; 
+     $(qtextid).text = quotesArray[rand-1].quote; 
+     $(qtextauth).text = quotesArray[rand-1].Author; 
 
     }
   };
