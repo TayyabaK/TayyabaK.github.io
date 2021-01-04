@@ -1,72 +1,53 @@
-class quote {
+/*class quote {
     constructor(text, author) {
         this.text = text;
         this.author = author;
     }
+}*/
+
+function readFile(fileName)
+{
+      var reader = new FileReader();
+      
+      reader.readAsText(file);
+    
+      reader.onload = function() {
+        console.log(reader.result);
+      };
+    
+      reader.onerror = function() {
+        console.log(reader.error);
+      };
+
 }
 
 
-function getRandomquote(filename) {
-    var allTextLines = allText.split(/\r\n|\n/);
-    var headers = allTextLines[0].split(',');
-    var lines = [];
-
-    for (var i = 1; i < allTextLines.length; i++) {
-        var data = allTextLines[i].split(',');
-        if (data.length == headers.length) {
-
-            var tarr = [];
-            for (var j = 0; j < headers.length; j++) {
-                tarr.push(headers[j] + ":" + data[j]);
-            }
-            lines.push(tarr);
-        }
-    }
+function getRandomquote() {
+   
     var rand = Math.random() * (3000 - 1) + 1;
     var quote = new quote(lines[rand][1], lines[rand][2]);
     return quote;
 }
 
+function clickqp()
+{
+       alert('Popular');
+       readFile('quotes.csv')
+}
+
+function clickqi()
+{
+       alert('Inspirational');
+}
+
+function clickqm(){
+       alert('Motivational');
+}
+
 $(document).ready(function(){
-    $('#btnqp').click(function() {
-    var quote = getRandomquote('quotes.csv');
-    $('#textqp').text = quote.text;
-    $('#pauthor').text = quote.author;
-    alert(quote.text + " : " + quote.author);
+    $('#btnqp').click(clickqp);
+    $('#btnqi').click(clickqi);
+    $('#btnqm').click(clickqm)
+
 });
 
-$('#btnqi').click(function() {
-    var quote = getRandomquote('inspirational-quotes.csv');
-    $('#textqi').text = quote.text;
-    $('#iauthor').text = quote.author;
-    alert(quote.text + " : " + quote.author);
-});
-
-$('#btnqm').click(function() {
-    var quote = getRandomquote('motivational-quotes.csv');
-    $('#textqm').text = quote.text;
-    $('#mauthor').text = quote.author;
-    alert(quote.text + " : " + quote.author);
-});
-});
-
-$('#btnqp').click(function() {
-    var quote = getRandomquote('quotes.csv');
-    $('#textqp').text = quote.text;
-    $('#pauthor').text = quote.author;
-    alert(quote.text + " : " + quote.author);
-});
-
-$('#btnqi').click(function() {
-    var quote = getRandomquote('inspirational-quotes.csv');
-    $('#textqi').text = quote.text;
-    $('#iauthor').text = quote.author;
-    alert(quote.text + " : " + quote.author);
-});
-
-$('#btnqm').click(function() {
-    var quote = getRandomquote('motivational-quotes.csv');
-    $('#textqm').text = quote.text;
-    $('#mauthor').text = quote.author;
-    alert(quote.text + " : " + quote.author);
-});
