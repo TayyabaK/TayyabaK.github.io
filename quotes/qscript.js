@@ -7,23 +7,10 @@
 
 function readFile(fileName)
 {
-      var reader = new FileReader();
-      
-      var f = new File([""], fileName);
-
-      
-      reader.readAsText(f);
-    
-      reader.onload = function() {
-        console.log(reader.result);
-      };
-    
-      reader.onerror = function() {
-        console.log(reader.error);
-      };
-
+       $.getJSON(fileName, function(jdata) {
+                console.log(jdata[0].quote + ":" jdata[0].author)
+               });
 }
-
 
 function getRandomquote() {
    
