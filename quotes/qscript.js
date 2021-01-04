@@ -10,7 +10,7 @@ function loadQuote(fileName,qtextid,qtextauth) {
 
     }
   };
-  xhttp.open("GET", "quotes.json", true);
+  xhttp.open("GET", fileName, true);
   xhttp.send();
 }
 
