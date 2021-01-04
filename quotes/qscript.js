@@ -17,19 +17,15 @@ function loadQuote(fileName,qtextid,qtextauth) {
 
 function clickqp()
 {
-       alert('Popular');
        loadQuote('quotes.json','#textqp','#pauthor');
 }
 
 function clickqi()
 {
-       alert('Inspirational');
        loadQuote('inspirational-quotes.json','#textqi','#iauthor');
-
 }
 
 function clickqm(){
-       alert('Motivational');
        loadQuote('motivational-quotes.json','#textqm','#mauthor');
 }
 
