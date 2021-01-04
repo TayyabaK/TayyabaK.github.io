@@ -22,7 +22,7 @@ function getRandomquote() {
 function clickqp()
 {
        alert('Popular');
-       readFile('quotes.csv')
+       readFile('quotes.json')
         
 }
 
