@@ -1,10 +1,3 @@
-/*class quote {
-    constructor(text, author) {
-        this.text = text;
-        this.author = author;
-    }
-}*/
-
 function loadQuote(fileName,qtextid,qtextauth) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
