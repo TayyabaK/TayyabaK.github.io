@@ -5,37 +5,38 @@
     }
 }*/
 
-function loadDoc() {
+function loadQuote(fileName,qtextid,qtextauth) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     document.getElementById("textqp").innerHTML = this.responseText;
+     var quotesArray  = JSON.parse(this.responseText)
+     
+     var rand = Math.random() * (3000 - 1) + 1;
+     $(qtextid).text = quotesArray[rand-1]['quote']; 
+     $(qtextauth).text = quotesArray[rand-1]['author']; 
+
     }
   };
   xhttp.open("GET", "quotes.json", true);
   xhttp.send();
 }
 
-function getRandomquote() {
-   
-    var rand = Math.random() * (3000 - 1) + 1;
-    var quote = new quote(lines[rand][1], lines[rand][2]);
-    return quote;
-}
-
 function clickqp()
 {
        alert('Popular');
-       loadDoc();        
+       loadQuote('quotes.json','#textqp','#pauthor');
 }
 
 function clickqi()
 {
        alert('Inspirational');
+       loadQuote('inspirational-quotes.json','#textqi','#iauthor');
+
 }
 
 function clickqm(){
        alert('Motivational');
+       loadQuote('motivational-quotes.json','#textqm','#mauthor');
 }
 
 $(document).ready(function(){
